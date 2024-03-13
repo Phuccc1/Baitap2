@@ -1,0 +1,187 @@
+<html>
+    <p>câu 1</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <h1>Giải phương trình bậc 1: ax + b = 0</h1>
+
+    <div>
+        <label for="a">Nhập giá trị a:</label>
+        <input type="number" id="a">
+    </div>
+
+    <div>
+        <label for="b">Nhập giá trị b:</label>
+        <input type="number" id="b">
+    </div>
+
+    <button onclick="giaiPhuongTrinh()">Giải</button>
+
+    <p id="result"></p>
+
+    <script>
+        function giaiPhuongTrinh() {
+            let a = parseFloat(document.getElementById('a').value);
+            let b = parseFloat(document.getElementById('b').value);
+
+            if (a === 0) {
+                document.getElementById('result').innerText = 'Phương trình không hợp lệ (a phải khác 0)';
+            } else {
+                let x = -b / a;
+                document.getElementById('result').innerText = 'Nghiệm của phương trình là x = ' + x;
+            }
+        }
+    </script>
+</body>
+<p> câu 2 </p>
+<head>
+    <title>Đóng góp ý kiến sản phẩm</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 250px;
+            padding: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đóng góp ý kiến sản phẩm</h1>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="input-name">Họ và tên:</label>
+                <input type="text" id="input-name" required>
+            </div>
+            <div class="input-group">
+                <label for="input-card">Mã thẻ:</label>
+                <input type="text" id="input-card" required>
+            </div>
+            <div class="input-group">
+                <label for="input-phone">Số điện thoại:</label>
+                <input type="tel" id="input-phone" required>
+            </div>
+            <div class="input-group">
+                <label for="input-email">Email:</label>
+                <input type="email" id="input-email" required>
+            </div>
+            <div class="input-group">
+                <label for="input-customer-type">Loại khách hàng:</label>
+                <select id="input-customer-type" required>
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="vip">VIP</option>
+                    <option value="regular">Regular</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="input-invoice">Mã hoá đơn:</label>
+                <input type="text" id="input-invoice">
+            </div>
+            <div class="input-group">
+                <label for="input-description">Chi tiết mô tả:</label>
+                <textarea id="input-description" required></textarea>
+            </div>
+            <button class="btn" type="submit">Gửi ý kiến</button>
+        </form>
+    </div>
+</body>
+    <p>câu 3</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .info {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .contact-form {
+            flex: 2;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(0, 255, 76);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h2>LIÊN HỆ</h2>
+            <p>Thông tin</p>
+            <p>🏠Kp. 6, P. Linh Trung, Tp. Thủ Đức, Tp. HCM</p>
+            <p>📨info@uit.edu.vn</p>
+            <p>📞+84 28 372 52002</p>
+        </div>
+        <form class="contact-form">
+            <label for="name">Họ và tên</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Địa chỉ e-mail</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="subject">Tiêu đề bài viết</label><br>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="message">Nội dung cần gửi</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="GỬI TIN NHẮN 💬">
+        </form>
+    </div>
+</body>
+</html>
